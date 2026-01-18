@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web QR Generator</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    #qrcode-container {
+      margin-top: 25px;
+    }
+  </style>
+</head>
+<body>
+  <p><a href="/">&larr; Back</a></p>
+  <h1>QR Code Generator</h1>
+  <p>Masukkan teks atau URL di bawah ini:</p>
+
+  <form onsubmit="event.preventDefault();generateQR()">
+    <input type="text" id="text-input" placeholder="https://google.com">
+    <button>Buat QR Code</button>
+  </form>
+
+  <div id="qrcode-container">
+    <div id="qrcode"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
